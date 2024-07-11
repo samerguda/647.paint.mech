@@ -1,0 +1,3626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspection Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #dc3545;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #dc3545;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        .btn-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #dc3545;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inspection Report</h1>
+        <div class="btn-container">
+            <button class="btn" onclick="filterTable()">Filter</button>
+            <button class="btn" onclick="window.print()">Print</button>
+            <button class="btn" onclick="copyTable()">Copy</button>
+        </div>
+        <table id="inspectionTable">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>SA3-PLN-ME-0005</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>SA3-PLN-ME-0008</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SA3-PLN-ME-0010</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>SA3-PLN-ME-0014</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>SA3-PLN-ME-0015</td>
+                    <td>Final painting for pipe to be done.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>SA3-PLN-ME-0020</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>SA3-PLN-ME-0021</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>SA3-PLN-ME-0023</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>SA3-PLN-ME-0027</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>SA3-PLN-ME-0028</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>SA3-PLN-ME-0030</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>SA3-PLN-ME-0034</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>SA3-PLN-ME-0036</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>SA3-PLN-ME-0040</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>SA3-PLN-ME-0044</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>SA3-PLN-ME-0046</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>SA3-PLN-ME-0050</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>SA3-PLN-ME-0052</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>SA3-PLN-ME-0056</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>SA3-PLN-ME-0060</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>SA3-PLN-ME-0062</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>SA3-PLN-ME-0066</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>SA3-PLN-ME-0068</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>SA3-PLN-ME-0072</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>SA3-PLN-ME-0076</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <!-- Continue adding rows in a similar fashion up to 647 -->
+
+
+                <tr>
+                    <td>25</td>
+                    <td>SA3-PLN-ME-0076</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>SA3-PLN-ME-0078</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>SA3-PLN-ME-0084</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>SA3-PLN-ME-0088</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>SA3-PLN-ME-0090</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>SA3-PLN-ME-0096</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>SA3-PLN-ME-0100</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>SA3-PLN-ME-0102</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>SA3-PLN-ME-0106</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>SA3-PLN-ME-0108</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>SA3-PLN-ME-0113</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>SA3-PLN-ME-0117</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>SA3-PLN-ME-0119</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>SA3-PLN-ME-0125</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint.</td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>SA3-PLN-ME-0129</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>SA3-PLN-ME-0131</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>SA3-PLN-ME-0136</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>SA3-PLN-ME-0140</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>SA3-PLN-ME-0142</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>SA3-PLN-ME-0143</td>
+                    <td>Touch-up paint to be done</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>SA3-PLN-ME-0147</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>SA3-PLN-ME-0149</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>SA3-PLN-ME-0155</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>SA3-PLN-ME-0159</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td>SA3-PLN-ME-0162</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td>SA3-PLN-ME-0166</td>
+                    <td>Vent spool pipe paint to done from flange to ball valve
+         
+ 
+
+
+                    <tr>
+                        <td>50</td>
+                        <td>SA3-PLN-ME-0166</td>
+                        <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                    </tr>
+                    <tr>
+                        <td>51</td>
+                        <td>SA3-PLN-ME-0168</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                    </tr>
+                    <tr>
+                        <td>52</td>
+                        <td>SA3-PLN-ME-0174</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>53</td>
+                        <td>SA3-PLN-ME-0175</td>
+                        <td>Touch-up paint to be done</td>
+                    </tr>
+                    <tr>
+                        <td>54</td>
+                        <td>SA3-PLN-ME-0179</td>
+                        <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                    </tr>
+                    <tr>
+                        <td>55</td>
+                        <td>SA3-PLN-ME-0181</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                    </tr>
+                    <tr>
+                        <td>56</td>
+                        <td>SA3-PLN-ME-0185</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>57</td>
+                        <td>SA3-PLN-ME-0189</td>
+                        <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                    </tr>
+                    <tr>
+                        <td>58</td>
+                        <td>SA3-PLN-ME-0191</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                    </tr>
+                    <tr>
+                        <td>59</td>
+                        <td>SA3-PLN-ME-0197</td>
+                        <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                    </tr>
+                    <tr>
+                        <td>60</td>
+                        <td>SA3-PLN-ME-0201</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>61</td>
+                        <td>SA3-PLN-ME-0203</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>62</td>
+                        <td>SA3-PLN-ME-0207</td>
+                        <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                    </tr>
+                    <tr>
+                        <td>63</td>
+                        <td>SA3-PLN-ME-0209</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                    </tr>
+                    <tr>
+                        <td>64</td>
+                        <td>SA3-PLN-ME-0215</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>65</td>
+                        <td>SA3-PLN-ME-0221</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint.</td>
+                    </tr>
+                    <tr>
+                        <td>66</td>
+                        <td>SA3-PLN-ME-0225</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>67</td>
+                        <td>SA3-PLN-ME-0229</td>
+                        <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                    </tr>
+                    <tr>
+                        <td>68</td>
+                        <td>SA3-PLN-ME-0231</td>
+                        <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                    </tr>
+                    <tr>
+                        <td>69</td>
+                        <td>SA3-PLN-ME-0237</td>
+                        <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                    </tr>
+                    <tr>
+                        <td>70</td>
+                        <td>SA3-PLN-ME-0238</td>
+                        <td>Final painting for pipe to be done.</td>
+                    </tr>
+                    <tr>
+                        <td>71</td>
+                        <td>SA3-PLN-ME-0242</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>72</td>
+                        <td>SA3-PLN-ME-0245</td>
+                        <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                    </tr>
+                    <tr>
+                        <td>73</td>
+                        <td>SA3-PLN-ME-0249</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+                    <tr>
+                        <td>74</td>
+                        <td>SA3-PLN-ME-0251</td>
+                        <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                    </tr>
+             
+
+
+
+
+
+
+
+
+
+                <tr>
+                    <td>75</td>
+                    <td>SA3-PLN-ME-0255</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>76</td>
+                    <td>SA3-PLN-ME-0257</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>77</td>
+                    <td>SA3-PLN-ME-0260</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>78</td>
+                    <td>SA3-PLN-ME-0264</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>79</td>
+                    <td>SA3-PLN-ME-0266</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>80</td>
+                    <td>SA3-PLN-ME-0272</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>SA3-PLN-ME-0276</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>82</td>
+                    <td>SA3-PLN-ME-0282</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>83</td>
+                    <td>SA3-PLN-ME-0287</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>84</td>
+                    <td>SA3-PLN-ME-0288</td>
+                    <td>Touch-up paint to be done</td>
+                </tr>
+                <tr>
+                    <td>85</td>
+                    <td>SA3-PLN-ME-0294</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>86</td>
+                    <td>SA3-PLN-ME-0298</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>87</td>
+                    <td>SA3-PLN-ME-0302</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>88</td>
+                    <td>SA3-PLN-ME-0304</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>89</td>
+                    <td>SA3-PLN-ME-0308</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>90</td>
+                    <td>SA3-PLN-ME-0310</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>SA3-PLN-ME-0314</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>92</td>
+                    <td>SA3-PLN-ME-0318</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>93</td>
+                    <td>SA3-PLN-ME-0320</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>94</td>
+                    <td>SA3-PLN-ME-0325</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>95</td>
+                    <td>SA3-PLN-ME-0329</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>96</td>
+                    <td>SA3-PLN-ME-0331</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>97</td>
+                    <td>SA3-PLN-ME-0335</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>98</td>
+                    <td>SA3-PLN-ME-0337</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>SA3-PLN-ME-0343</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+           
+
+
+
+
+
+                <tr>
+                    <td>100</td>
+                    <td>SA3-PLN-ME-0344</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>101</td>
+                    <td>SA3-PLN-ME-0348</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>SA3-PLN-ME-0351</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>103</td>
+                    <td>SA3-PLN-ME-0355</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+           
+
+                <tr>
+                    <td>104</td>
+                    <td>SA3-PLN-ME-0357</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>105</td>
+                    <td>SA3-PLN-ME-0364</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>106</td>
+                    <td>SA3-PLN-ME-0368</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>107</td>
+                    <td>SA3-PLN-ME-0370</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>108</td>
+                    <td>SA3-PLN-ME-0375</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>109</td>
+                    <td>SA3-PLN-ME-0376</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>110</td>
+                    <td>SA3-PLN-ME-0380</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>111</td>
+                    <td>SA3-PLN-ME-0381</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>112</td>
+                    <td>SA3-PLN-ME-0384</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>113</td>
+                    <td>SA3-PLN-ME-0387</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>114</td>
+                    <td>SA3-PLN-ME-0389</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>115</td>
+                    <td>SA3-PLN-ME-0394</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>116</td>
+                    <td>SA3-PLN-ME-0398</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>117</td>
+                    <td>SA3-PLN-ME-0399</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>118</td>
+                    <td>SA3-PLN-ME-0402</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>119</td>
+                    <td>SA3-PLN-ME-0407</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>120</td>
+                    <td>SA3-PLN-ME-0412</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>121</td>
+                    <td>SA3-PLN-ME-0416</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>122</td>
+                    <td>SA3-PLN-ME-0418</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>SA3-PLN-ME-0421</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>124</td>
+                    <td>SA3-PLN-ME-0423</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>125</td>
+                    <td>SA3-PLN-ME-0428</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>126</td>
+                    <td>SA3-PLN-ME-0432</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>127</td>
+                    <td>SA3-PLN-ME-0434</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>128</td>
+                    <td>SA3-PLN-ME-0437</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+
+
+                <tr>
+                    <td>129</td>
+                    <td>SA3-PLN-ME-0439</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>130</td>
+                    <td>SA3-PLN-ME-0444</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>131</td>
+                    <td>SA3-PLN-ME-0448</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>132</td>
+                    <td>SA3-PLN-ME-0452</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>133</td>
+                    <td>SA3-PLN-ME-0455</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>134</td>
+                    <td>SA3-PLN-ME-0457</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>135</td>
+                    <td>SA3-PLN-ME-0462</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>136</td>
+                    <td>SA3-PLN-ME-0466</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>137</td>
+                    <td>SA3-PLN-ME-0469</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>138</td>
+                    <td>SA3-PLN-ME-0472</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>139</td>
+                    <td>SA3-PLN-ME-0474</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>140</td>
+                    <td>SA3-PLN-ME-0479</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>141</td>
+                    <td>SA3-PLN-ME-0482</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>142</td>
+                    <td>SA3-PLN-ME-0484</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>143</td>
+                    <td>SA3-PLN-ME-0489</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>144</td>
+                    <td>SA3-PLN-ME-0493</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>145</td>
+                    <td>SA3-PLN-ME-0496</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>146</td>
+                    <td>SA3-PLN-ME-0499</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>147</td>
+                    <td>SA3-PLN-ME-0501</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>148</td>
+                    <td>SA3-PLN-ME-0506</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>149</td>
+                    <td>SA3-PLN-ME-0510</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>150</td>
+                    <td>SA3-PLN-ME-0513</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>151</td>
+                    <td>SA3-PLN-ME-0516</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>152</td>
+                    <td>SA3-PLN-ME-0518</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>153</td>
+                    <td>SA3-PLN-ME-0525</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+
+
+                    <td>154</td>
+                    <td>SA3-PLN-ME-0526</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>155</td>
+                    <td>SA3-PLN-ME-0530</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>156</td>
+                    <td>SA3-PLN-ME-0533</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>157</td>
+                    <td>SA3-PLN-ME-0536</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>158</td>
+                    <td>SA3-PLN-ME-0538</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>159</td>
+                    <td>SA3-PLN-ME-0544</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>160</td>
+                    <td>SA3-PLN-ME-0547</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>161</td>
+                    <td>SA3-PLN-ME-0549</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>162</td>
+                    <td>SA3-PLN-ME-0555</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>163</td>
+                    <td>SA3-PLN-ME-0559</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>164</td>
+                    <td>SA3-PLN-ME-0561</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>165</td>
+                    <td>SA3-PLN-ME-0564</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>166</td>
+                    <td>SA3-PLN-ME-0566</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>167</td>
+                    <td>SA3-PLN-ME-0569</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>168</td>
+                    <td>SA3-PLN-ME-0573</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>169</td>
+                    <td>SA3-PLN-ME-0575</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>170</td>
+                    <td>SA3-PLN-ME-0578</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>171</td>
+                    <td>SA3-PLN-ME-0580</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>172</td>
+                    <td>SA3-PLN-ME-0583</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>173</td>
+                    <td>SA3-PLN-ME-0587</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>174</td>
+                    <td>SA3-PLN-ME-0593</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>175</td>
+                    <td>SA3-PLN-ME-0596</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>176</td>
+                    <td>SA3-PLN-ME-0598</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>177</td>
+                    <td>SA3-PLN-ME-0602</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>178</td>
+                    <td>SA3-PLN-ME-0606</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+
+
+                <tr>
+                    <td>179</td>
+                    <td>SA3-PLN-ME-0610</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>180</td>
+                    <td>SA3-PLN-ME-0613</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>181</td>
+                    <td>SA3-PLN-ME-0615</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>182</td>
+                    <td>SA3-PLN-ME-0619</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>183</td>
+                    <td>SA3-PLN-ME-0623</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>184</td>
+                    <td>SA3-PLN-ME-0626</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>185</td>
+                    <td>SA3-PLN-ME-0629</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>186</td>
+                    <td>SA3-PLN-ME-0631</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>187</td>
+                    <td>SA3-PLN-ME-0635</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>188</td>
+                    <td>SA3-PLN-ME-0638</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>189</td>
+                    <td>SA3-PLN-ME-0640</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>190</td>
+                    <td>SA3-PLN-ME-0644</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>191</td>
+                    <td>SA3-PLN-ME-0648</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>192</td>
+                    <td>SA3-PLN-ME-0651</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>193</td>
+                    <td>SA3-PLN-ME-0654</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>194</td>
+                    <td>SA3-PLN-ME-0656</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>195</td>
+                    <td>SA3-PLN-ME-0660</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>196</td>
+                    <td>SA3-PLN-ME-0664</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>197</td>
+                    <td>SA3-PLN-ME-0668</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>198</td>
+                    <td>SA3-PLN-ME-0671</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>199</td>
+                    <td>SA3-PLN-ME-0673</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>200</td>
+                    <td>SA3-PLN-ME-0679</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>201</td>
+                    <td>SA3-PLN-ME-0683</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>202</td>
+                    <td>SA3-PLN-ME-0687</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>203</td>
+                    <td>SA3-PLN-ME-0690</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+
+
+                <tr>
+                    <td>204</td>
+                    <td>SA3-PLN-ME-0692</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>205</td>
+                    <td>SA3-PLN-ME-0696</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>206</td>
+                    <td>SA3-PLN-ME-0700</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>207</td>
+                    <td>SA3-PLN-ME-0703</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>208</td>
+                    <td>SA3-PLN-ME-0706</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>209</td>
+                    <td>SA3-PLN-ME-0708</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>210</td>
+                    <td>SA3-PLN-ME-0714</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>211</td>
+                    <td>SA3-PLN-ME-0718</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>212</td>
+                    <td>SA3-PLN-ME-0722</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>213</td>
+                    <td>SA3-PLN-ME-0725</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>214</td>
+                    <td>SA3-PLN-ME-0727</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>215</td>
+                    <td>SA3-PLN-ME-0731</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>216</td>
+                    <td>SA3-PLN-ME-0735</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>217</td>
+                    <td>SA3-PLN-ME-0737</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>218</td>
+                    <td>SA3-PLN-ME-0741</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>219</td>
+                    <td>SA3-PLN-ME-0744</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>220</td>
+                    <td>SA3-PLN-ME-0747</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>221</td>
+                    <td>SA3-PLN-ME-0749</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>222</td>
+                    <td>SA3-PLN-ME-0753</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>223</td>
+                    <td>SA3-PLN-ME-0757</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>224</td>
+                    <td>SA3-PLN-ME-0759</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>225</td>
+                    <td>SA3-PLN-ME-0762</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>226</td>
+                    <td>SA3-PLN-ME-0764</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>227</td>
+                    <td>SA3-PLN-ME-0768</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>228</td>
+                    <td>SA3-PLN-ME-0772</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+
+
+
+                <tr>
+                    <td>229</td>
+                    <td>SA3-PLN-ME-0778</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>230</td>
+                    <td>SA3-PLN-ME-0780</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>231</td>
+                    <td>SA3-PLN-ME-0785</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>232</td>
+                    <td>SA3-PLN-ME-0789</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>233</td>
+                    <td>SA3-PLN-ME-0793</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>234</td>
+                    <td>SA3-PLN-ME-0794</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>235</td>
+                    <td>SA3-PLN-ME-0799</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>236</td>
+                    <td>SA3-PLN-ME-0800</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>237</td>
+                    <td>SA3-PLN-ME-0803</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>238</td>
+                    <td>SA3-PLN-ME-0806</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>239</td>
+                    <td>SA3-PLN-ME-0808</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>240</td>
+                    <td>SA3-PLN-ME-0814</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>241</td>
+                    <td>SA3-PLN-ME-0815</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>242</td>
+                    <td>SA3-PLN-ME-0820</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>243</td>
+                    <td>SA3-PLN-ME-0821</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>244</td>
+                    <td>SA3-PLN-ME-0825</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>245</td>
+                    <td>SA3-PLN-ME-0826</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>246</td>
+                    <td>SA3-PLN-ME-0831</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>247</td>
+                    <td>SA3-PLN-ME-0832</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>248</td>
+                    <td>SA3-PLN-ME-0836</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>249</td>
+                    <td>SA3-PLN-ME-0839</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>250</td>
+                    <td>SA3-PLN-ME-0841</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>251</td>
+                    <td>SA3-PLN-ME-0845</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>252</td>
+                    <td>SA3-PLN-ME-0846</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>253</td>
+                    <td>SA3-PLN-ME-0851</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>254</td>
+                    <td>SA3-PLN-ME-0852</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+
+
+                <tr>
+                    <td>255</td>
+                    <td>SA3-PLN-ME-0856</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>256</td>
+                    <td>SA3-PLN-ME-0859</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>257</td>
+                    <td>SA3-PLN-ME-0861</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>258</td>
+                    <td>SA3-PLN-ME-0864</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>259</td>
+                    <td>SA3-PLN-ME-0865</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>260</td>
+                    <td>SA3-PLN-ME-0869</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>261</td>
+                    <td>SA3-PLN-ME-0870</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>262</td>
+                    <td>SA3-PLN-ME-0873</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>263</td>
+                    <td>SA3-PLN-ME-0874</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>264</td>
+                    <td>SA3-PLN-ME-0879</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>265</td>
+                    <td>SA3-PLN-ME-0880</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>266</td>
+                    <td>SA3-PLN-ME-0883</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>267</td>
+                    <td>SA3-PLN-ME-0886</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>268</td>
+                    <td>SA3-PLN-ME-0888</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>269</td>
+                    <td>SA3-PLN-ME-0892</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>270</td>
+                    <td>SA3-PLN-ME-0893</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>271</td>
+                    <td>SA3-PLN-ME-0897</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>272</td>
+                    <td>SA3-PLN-ME-0898</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>273</td>
+                    <td>SA3-PLN-ME-0900</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>274</td>
+                    <td>SA3-PLN-ME-0903</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>275</td>
+                    <td>SA3-PLN-ME-0905</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>276</td>
+                    <td>SA3-PLN-ME-0909</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>277</td>
+                    <td>SA3-PLN-ME-0912</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>278</td>
+                    <td>SA3-PLN-ME-0914</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>279</td>
+                    <td>SA3-PLN-ME-0919</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>280</td>
+                    <td>SA3-PLN-ME-0920</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+
+
+                <tr>
+                    <td>281</td>
+                    <td>SA3-PLN-ME-0924</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>282</td>
+                    <td>SA3-PLN-ME-0925</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>283</td>
+                    <td>SA3-PLN-ME-0928</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>284</td>
+                    <td>SA3-PLN-ME-0931</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>285</td>
+                    <td>SA3-PLN-ME-0933</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>286</td>
+                    <td>SA3-PLN-ME-0938</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>287</td>
+                    <td>SA3-PLN-ME-0941</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>288</td>
+                    <td>SA3-PLN-ME-0943</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>289</td>
+                    <td>SA3-PLN-ME-0948</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>290</td>
+                    <td>SA3-PLN-ME-0951</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>291</td>
+                    <td>SA3-PLN-ME-0953</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>292</td>
+                    <td>SA3-PLN-ME-0957</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>293</td>
+                    <td>SA3-PLN-ME-0958</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>294</td>
+                    <td>SA3-PLN-ME-0963</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>295</td>
+                    <td>SA3-PLN-ME-0964</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>296</td>
+                    <td>SA3-PLN-ME-0966</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>297</td>
+                    <td>SA3-PLN-ME-0969</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>298</td>
+                    <td>SA3-PLN-ME-0971</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>299</td>
+                    <td>SA3-PLN-ME-0975</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>SA3-PLN-ME-0978</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>301</td>
+                    <td>SA3-PLN-ME-0980</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>302</td>
+                    <td>SA3-PLN-ME-0983</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>303</td>
+                    <td>SA3-PLN-ME-0984</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>304</td>
+                    <td>SA3-PLN-ME-0989</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>305</td>
+                    <td>SA3-PLN-ME-0990</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+
+
+
+
+
+
+
+                <tr>
+                    <td>306</td>
+                    <td>SA3-PLN-ME-0992</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>307</td>
+                    <td>SA3-PLN-ME-0995</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>308</td>
+                    <td>SA3-PLN-ME-0997</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>309</td>
+                    <td>SA3-PLN-ME-1000</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>310</td>
+                    <td>SA3-PLN-ME-1001</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>311</td>
+                    <td>SA3-PLN-ME-1006</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>312</td>
+                    <td>SA3-PLN-ME-1007</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>313</td>
+                    <td>SA3-PLN-ME-1009</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>314</td>
+                    <td>SA3-PLN-ME-1012</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>315</td>
+                    <td>SA3-PLN-ME-1014</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>316</td>
+                    <td>SA3-PLN-ME-1019</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>317</td>
+                    <td>SA3-PLN-ME-1022</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>318</td>
+                    <td>SA3-PLN-ME-1024</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>319</td>
+                    <td>SA3-PLN-ME-1029</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>320</td>
+                    <td>SA3-PLN-ME-1032</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>321</td>
+                    <td>SA3-PLN-ME-1034</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>322</td>
+                    <td>SA3-PLN-ME-1039</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>323</td>
+                    <td>SA3-PLN-ME-1042</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>324</td>
+                    <td>SA3-PLN-ME-1044</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>325</td>
+                    <td>SA3-PLN-ME-1049</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>326</td>
+                    <td>SA3-PLN-ME-1050</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>327</td>
+                    <td>SA3-PLN-ME-1055</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>328</td>
+                    <td>SA3-PLN-ME-1056</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>329</td>
+                    <td>SA3-PLN-ME-1058</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>330</td>
+                    <td>SA3-PLN-ME-1061</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+              
+
+
+
+                <tr>
+                    <td>331</td>
+                    <td>SA3-PLN-ME-1063</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>332</td>
+                    <td>SA3-PLN-ME-1068</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>333</td>
+                    <td>SA3-PLN-ME-1071</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>334</td>
+                    <td>SA3-PLN-ME-1073</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>335</td>
+                    <td>SA3-PLN-ME-1078</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>336</td>
+                    <td>SA3-PLN-ME-1079</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>337</td>
+                    <td>SA3-PLN-ME-1083</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>338</td>
+                    <td>SA3-PLN-ME-1084</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>339</td>
+                    <td>SA3-PLN-ME-1086</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>340</td>
+                    <td>SA3-PLN-ME-1089</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>341</td>
+                    <td>SA3-PLN-ME-1091</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>342</td>
+                    <td>SA3-PLN-ME-1096</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>343</td>
+                    <td>SA3-PLN-ME-1097</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>344</td>
+                    <td>SA3-PLN-ME-1102</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>345</td>
+                    <td>SA3-PLN-ME-1103</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>346</td>
+                    <td>SA3-PLN-ME-1105</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>347</td>
+                    <td>SA3-PLN-ME-1108</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>348</td>
+                    <td>SA3-PLN-ME-1110</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>349</td>
+                    <td>SA3-PLN-ME-1115</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>350</td>
+                    <td>SA3-PLN-ME-1118</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>351</td>
+                    <td>SA3-PLN-ME-1120</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>352</td>
+                    <td>SA3-PLN-ME-1125</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>353</td>
+                    <td>SA3-PLN-ME-1126</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>354</td>
+                    <td>SA3-PLN-ME-1131</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>355</td>
+                    <td>SA3-PLN-ME-1132</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>356</td>
+                    <td>SA3-PLN-ME-1134</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+
+                <tr>
+                    <td>357</td>
+                    <td>SA3-PLN-ME-1137</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>358</td>
+                    <td>SA3-PLN-ME-1139</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>359</td>
+                    <td>SA3-PLN-ME-1143</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>360</td>
+                    <td>SA3-PLN-ME-1144</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>361</td>
+                    <td>SA3-PLN-ME-1149</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>362</td>
+                    <td>SA3-PLN-ME-1150</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>363</td>
+                    <td>SA3-PLN-ME-1152</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>364</td>
+                    <td>SA3-PLN-ME-1155</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>365</td>
+                    <td>SA3-PLN-ME-1157</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>366</td>
+                    <td>SA3-PLN-ME-1161</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>367</td>
+                    <td>SA3-PLN-ME-1162</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>368</td>
+                    <td>SA3-PLN-ME-1167</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>369</td>
+                    <td>SA3-PLN-ME-1168</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>370</td>
+                    <td>SA3-PLN-ME-1170</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>371</td>
+                    <td>SA3-PLN-ME-1173</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>372</td>
+                    <td>SA3-PLN-ME-1175</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>373</td>
+                    <td>SA3-PLN-ME-1180</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>374</td>
+                    <td>SA3-PLN-ME-1181</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>375</td>
+                    <td>SA3-PLN-ME-1186</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>376</td>
+                    <td>SA3-PLN-ME-1187</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>377</td>
+                    <td>SA3-PLN-ME-1190</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>378</td>
+                    <td>SA3-PLN-ME-1193</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>379</td>
+                    <td>SA3-PLN-ME-1195</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>380</td>
+                    <td>SA3-PLN-ME-1199</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>381</td>
+                    <td>SA3-PLN-ME-1200</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+
+            
+
+
+                <tr>
+                    <td>382</td>
+                    <td>SA3-PLN-ME-1205</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>383</td>
+                    <td>SA3-PLN-ME-1206</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>384</td>
+                    <td>SA3-PLN-ME-1208</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>385</td>
+                    <td>SA3-PLN-ME-1209</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>386</td>
+                    <td>SA3-PLN-ME-1214</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>387</td>
+                    <td>SA3-PLN-ME-1215</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>388</td>
+                    <td>SA3-PLN-ME-1217</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>389</td>
+                    <td>SA3-PLN-ME-1218</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>390</td>
+                    <td>SA3-PLN-ME-1223</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>391</td>
+                    <td>SA3-PLN-ME-1224</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>392</td>
+                    <td>SA3-PLN-ME-1235</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>393</td>
+                    <td>SA3-PLN-ME-1247</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>394</td>
+                    <td>SA3-PLN-ME-1255</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>395</td>
+                    <td>SA3-PLN-ME-1256</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>396</td>
+                    <td>SA3-PLN-ME-1259</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>397</td>
+                    <td>SA3-PLN-ME-1260</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>398</td>
+                    <td>SA3-PLN-ME-1263</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>399</td>
+                    <td>SA3-PLN-ME-1264</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>SA3-PLN-ME-1267</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>SA3-PLN-ME-1268</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>402</td>
+                    <td>SA3-PLN-ME-1270</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>403</td>
+                    <td>SA3-PLN-ME-1271</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>SA3-PLN-ME-1276</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>405</td>
+                    <td>SA3-PLN-ME-1277</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>406</td>
+                    <td>SA3-PLN-ME-1279</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>407</td>
+                    <td>SA3-PLN-ME-1280</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>408</td>
+                    <td>SA3-PLN-ME-1285</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>409</td>
+                    <td>SA3-PLN-ME-1286</td>
+                    <td>All rusted<!DOCTYPE html>
+
+                <tr>
+                    <td>382</td>
+                    <td>SA3-PLN-ME-1205</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>383</td>
+                    <td>SA3-PLN-ME-1206</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>384</td>
+                    <td>SA3-PLN-ME-1208</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>385</td>
+                    <td>SA3-PLN-ME-1209</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>386</td>
+                    <td>SA3-PLN-ME-1214</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>387</td>
+                    <td>SA3-PLN-ME-1215</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>388</td>
+                    <td>SA3-PLN-ME-1217</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>389</td>
+                    <td>SA3-PLN-ME-1218</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>390</td>
+                    <td>SA3-PLN-ME-1223</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>391</td>
+                    <td>SA3-PLN-ME-1224</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>392</td>
+                    <td>SA3-PLN-ME-1235</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>393</td>
+                    <td>SA3-PLN-ME-1247</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>394</td>
+                    <td>SA3-PLN-ME-1255</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>395</td>
+                    <td>SA3-PLN-ME-1256</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>396</td>
+                    <td>SA3-PLN-ME-1259</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>397</td>
+                    <td>SA3-PLN-ME-1260</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>398</td>
+                    <td>SA3-PLN-ME-1263</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>399</td>
+                    <td>SA3-PLN-ME-1264</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>SA3-PLN-ME-1267</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>401</td>
+                    <td>SA3-PLN-ME-1268</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>402</td>
+                    <td>SA3-PLN-ME-1270</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>403</td>
+                    <td>SA3-PLN-ME-1271</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>404</td>
+                    <td>SA3-PLN-ME-1276</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>405</td>
+                    <td>SA3-PLN-ME-1277</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>406</td>
+                    <td>SA3-PLN-ME-1279</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>407</td>
+                    <td>SA3-PLN-ME-1280</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>408</td>
+                    <td>SA3-PLN-ME-1285</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+               
+
+
+                <tr>
+                    <td>409</td>
+                    <td>SA3-PLN-ME-1286</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>410</td>
+                    <td>SA3-PLN-ME-1297</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>411</td>
+                    <td>SA3-PLN-ME-1309</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>412</td>
+                    <td>SA3-PLN-ME-1317</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>413</td>
+                    <td>SA3-PLN-ME-1318</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>414</td>
+                    <td>SA3-PLN-ME-1321</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>415</td>
+                    <td>SA3-PLN-ME-1322</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>416</td>
+                    <td>SA3-PLN-ME-1325</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>417</td>
+                    <td>SA3-PLN-ME-1326</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>418</td>
+                    <td>SA3-PLN-ME-1329</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>419</td>
+                    <td>SA3-PLN-ME-1330</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>420</td>
+                    <td>SA3-PLN-ME-1332</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>421</td>
+                    <td>SA3-PLN-ME-1333</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>422</td>
+                    <td>SA3-PLN-ME-1338</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>423</td>
+                    <td>SA3-PLN-ME-1339</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>424</td>
+                    <td>SA3-PLN-ME-1341</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>425</td>
+                    <td>SA3-PLN-ME-1342</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>426</td>
+                    <td>SA3-PLN-ME-1347</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+            
+
+                <tr>
+                    <td>426</td>
+                    <td>SA3-PLN-ME-1347</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>427</td>
+                    <td>SA3-PLN-ME-1348</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>428</td>
+                    <td>SA3-PLN-ME-1350</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>429</td>
+                    <td>SA3-PLN-ME-1353</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>430</td>
+                    <td>SA3-PLN-ME-1355</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>431</td>
+                    <td>SA3-PLN-ME-1359</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>432</td>
+                    <td>SA3-PLN-ME-1362</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>433</td>
+                    <td>SA3-PLN-ME-1364</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>434</td>
+                    <td>SA3-PLN-ME-1368</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>435</td>
+                    <td>SA3-PLN-ME-1369</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>436</td>
+                    <td>SA3-PLN-ME-1374</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>437</td>
+                    <td>SA3-PLN-ME-1375</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>438</td>
+                    <td>SA3-PLN-ME-1377</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>439</td>
+                    <td>SA3-PLN-ME-1378</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>440</td>
+                    <td>SA3-PLN-ME-1383</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>441</td>
+                    <td>SA3-PLN-ME-1384</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>442</td>
+                    <td>SA3-PLN-ME-1395</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>443</td>
+                    <td>SA3-PLN-ME-1407</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>444</td>
+                    <td>SA3-PLN-ME-1415</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>445</td>
+                    <td>SA3-PLN-ME-1416</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>446</td>
+                    <td>SA3-PLN-ME-1419</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>447</td>
+                    <td>SA3-PLN-ME-1420</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>448</td>
+                    <td>SA3-PLN-ME-1423</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>449</td>
+                    <td>SA3-PLN-ME-1424</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>450</td>
+                    <td>SA3-PLN-ME-1427</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>451</td>
+                    <td>SA3-PLN-ME-1428</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>452</td>
+                    <td>SA3-PLN-ME-1430</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+
+
+                <tr>
+                    <td>453</td>
+                    <td>SA3-PLN-ME-1431</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>454</td>
+                    <td>SA3-PLN-ME-1436</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>455</td>
+                    <td>SA3-PLN-ME-1437</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>456</td>
+                    <td>SA3-PLN-ME-1439</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>457</td>
+                    <td>SA3-PLN-ME-1440</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>458</td>
+                    <td>SA3-PLN-ME-1445</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>459</td>
+                    <td>SA3-PLN-ME-1446</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>460</td>
+                    <td>SA3-PLN-ME-1448</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>461</td>
+                    <td>SA3-PLN-ME-1449</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>462</td>
+                    <td>SA3-PLN-ME-1454</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>463</td>
+                    <td>SA3-PLN-ME-1455</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>464</td>
+                    <td>SA3-PLN-ME-1457</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>465</td>
+                    <td>SA3-PLN-ME-1460</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>466</td>
+                    <td>SA3-PLN-ME-1462</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>467</td>
+                    <td>SA3-PLN-ME-1466</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>468</td>
+                    <td>SA3-PLN-ME-1469</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>469</td>
+                    <td>SA3-PLN-ME-1471</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>470</td>
+                    <td>SA3-PLN-ME-1475</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>471</td>
+                    <td>SA3-PLN-ME-1478</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>472</td>
+                    <td>SA3-PLN-ME-1480</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>473</td>
+                    <td>SA3-PLN-ME-1484</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>474</td>
+                    <td>SA3-PLN-ME-1485</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>475</td>
+                    <td>SA3-PLN-ME-1490</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>476</td>
+                    <td>SA3-PLN-ME-1491</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>477</td>
+                    <td>SA3-PLN-ME-1493</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>478</td>
+                    <td>SA3-PLN-ME-1496</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+
+  
+                <tr>
+                    <td>479</td>
+                    <td>SA3-PLN-ME-1498</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>480</td>
+                    <td>SA3-PLN-ME-1502</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>481</td>
+                    <td>SA3-PLN-ME-1503</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>482</td>
+                    <td>SA3-PLN-ME-1508</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>483</td>
+                    <td>SA3-PLN-ME-1509</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>484</td>
+                    <td>SA3-PLN-ME-1512</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>485</td>
+                    <td>SA3-PLN-ME-1515</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>486</td>
+                    <td>SA3-PLN-ME-1517</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>487</td>
+                    <td>SA3-PLN-ME-1521</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>488</td>
+                    <td>SA3-PLN-ME-1524</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>489</td>
+                    <td>SA3-PLN-ME-1526</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>490</td>
+                    <td>SA3-PLN-ME-1530</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>491</td>
+                    <td>SA3-PLN-ME-1531</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>492</td>
+                    <td>SA3-PLN-ME-1536</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>493</td>
+                    <td>SA3-PLN-ME-1537</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>494</td>
+                    <td>SA3-PLN-ME-1540</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>495</td>
+                    <td>SA3-PLN-ME-1543</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>496</td>
+                    <td>SA3-PLN-ME-1545</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>497</td>
+                    <td>SA3-PLN-ME-1549</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>498</td>
+                    <td>SA3-PLN-ME-1550</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>499</td>
+                    <td>SA3-PLN-ME-1555</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>500</td>
+                    <td>SA3-PLN-ME-1556</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>501</td>
+                    <td>SA3-PLN-ME-1558</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>502</td>
+                    <td>SA3-PLN-ME-1561</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>503</td>
+                    <td>SA3-PLN-ME-1563</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>504</td>
+                    <td>SA3-PLN-ME-1567</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+
+
+                <tr>
+                    <td>505</td>
+                    <td>SA3-PLN-ME-1570</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>506</td>
+                    <td>SA3-PLN-ME-1572</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>507</td>
+                    <td>SA3-PLN-ME-1576</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>508</td>
+                    <td>SA3-PLN-ME-1577</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>509</td>
+                    <td>SA3-PLN-ME-1582</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>510</td>
+                    <td>SA3-PLN-ME-1583</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>511</td>
+                    <td>SA3-PLN-ME-1585</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>512</td>
+                    <td>SA3-PLN-ME-1588</td>
+                    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+                </tr>
+                <tr>
+                    <td>513</td>
+                    <td>SA3-PLN-ME-1590</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>514</td>
+                    <td>SA3-PLN-ME-1594</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>515</td>
+                    <td>SA3-PLN-ME-1595</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>516</td>
+                    <td>SA3-PLN-ME-1600</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+                </tr>
+                <tr>
+                    <td>517</td>
+                    <td>SA3-PLN-ME-1601</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>518</td>
+                    <td>SA3-PLN-ME-1612</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>519</td>
+                    <td>SA3-PLN-ME-1624</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>520</td>
+                    <td>SA3-PLN-ME-1632</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>521</td>
+                    <td>SA3-PLN-ME-1633</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>522</td>
+                    <td>SA3-PLN-ME-1636</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>523</td>
+                    <td>SA3-PLN-ME-1637</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>524</td>
+                    <td>SA3-PLN-ME-1640</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>525</td>
+                    <td>SA3-PLN-ME-1641</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>526</td>
+                    <td>SA3-PLN-ME-1644</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>527</td>
+                    <td>SA3-PLN-ME-1645</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>528</td>
+                    <td>SA3-PLN-ME-1656</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>529</td>
+                    <td>SA3-PLN-ME-1668</td>
+                    <td>Pipe supports touch-up paint to be performed</td>
+                </tr>
+                <tr>
+                    <td>530</td>
+                    <td>SA3-PLN-ME-1676</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>531</td>
+                    <td>SA3-PLN-ME-1677</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+         
+                <tr>
+                    <td>531</td>
+                    <td>SA3-PLN-ME-1677</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>532</td>
+                    <td>SA3-PLN-ME-1680</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>533</td>
+                    <td>SA3-PLN-ME-1681</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>534</td>
+                    <td>SA3-PLN-ME-1684</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>535</td>
+                    <td>SA3-PLN-ME-1685</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>536</td>
+                    <td>SA3-PLN-ME-1688</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>537</td>
+                    <td>SA3-PLN-ME-1689</td>
+                    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+                </tr>
+                <tr>
+                    <td>538</td>
+                    <td>SA3-PLN-ME-1691</td>
+                    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+                </tr>
+                <tr>
+                    <td>539</td>
+                    <td>SA3-PLN-ME-1692</td>
+                    <td>Final painting for pipe to be done</td>
+                </tr>
+                <tr>
+                    <td>540</td>
+                    <td>SA3-PLN-ME-1697</td>
+                    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be</td>
+</tr>
+
+
+
+<tr>
+    <td>541</td>
+    <td>SA3-PLN-ME-1698</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>542</td>
+    <td>SA3-PLN-ME-1700</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>543</td>
+    <td>SA3-PLN-ME-1701</td>
+    <td>Final painting for pipe to be done</td>
+</tr>
+<tr>
+    <td>544</td>
+    <td>SA3-PLN-ME-1706</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>545</td>
+    <td>SA3-PLN-ME-1707</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>546</td>
+    <td>SA3-PLN-ME-1709</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>547</td>
+    <td>SA3-PLN-ME-1712</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>548</td>
+    <td>SA3-PLN-ME-1713</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+
+</tr>
+<tr>
+    <td>549</td>
+    <td>SA3-PLN-ME-1718</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>550</td>
+    <td>SA3-PLN-ME-1721</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>551</td>
+    <td>SA3-PLN-ME-1722</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>552</td>
+    <td>SA3-PLN-ME-1727</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>553</td>
+    <td>SA3-PLN-ME-1730</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>554</td>
+    <td>SA3-PLN-ME-1734</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>555</td>
+    <td>SA3-PLN-ME-1737</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>556</td>
+    <td>SA3-PLN-ME-1738</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>557</td>
+    <td>SA3-PLN-ME-1744</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>558</td>
+    <td>SA3-PLN-ME-1748</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>559</td>
+    <td>SA3-PLN-ME-1750</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>560</td>
+    <td>SA3-PLN-ME-1753</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>561</td>
+    <td>SA3-PLN-ME-1754</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>562</td>
+    <td>SA3-PLN-ME-1759</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>563</td>
+    <td>SA3-PLN-ME-1763</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired</td>
+
+</tr>
+
+
+
+<tr>
+    <td>564</td>
+    <td>SA3-PLN-ME-1765</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>565</td>
+    <td>SA3-PLN-ME-1768</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>566</td>
+    <td>SA3-PLN-ME-1769</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>567</td>
+    <td>SA3-PLN-ME-1774</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>568</td>
+    <td>SA3-PLN-ME-1778</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>569</td>
+    <td>SA3-PLN-ME-1780</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>570</td>
+    <td>SA3-PLN-ME-1783</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>571</td>
+    <td>SA3-PLN-ME-1784</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>572</td>
+    <td>SA3-PLN-ME-1789</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>573</td>
+    <td>SA3-PLN-ME-1793</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>574</td>
+    <td>SA3-PLN-ME-1797</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>575</td>
+    <td>SA3-PLN-ME-1800</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>576</td>
+    <td>SA3-PLN-ME-1801</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>577</td>
+    <td>SA3-PLN-ME-1807</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>578</td>
+    <td>SA3-PLN-ME-1811</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>579</td>
+    <td>SA3-PLN-ME-1813</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>580</td>
+    <td>SA3-PLN-ME-1816</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>581</td>
+    <td>SA3-PLN-ME-1817</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>582</td>
+    <td>SA3-PLN-ME-1822</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>583</td>
+    <td>SA3-PLN-ME-1825</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr>
+    <td>584</td>
+    <td>SA3-PLN-ME-1826</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr>
+    <td>585</td>
+    <td>SA3-PLN-ME-1831</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr>
+    <td>586</td>
+    <td>SA3-PLN-ME-1835</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr>
+    <td>587</td>
+    <td>SA3-PLN-ME-1838</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired</td>
+</tr>
+
+
+
+
+<tr class="colored-red">
+    <td>587</td>
+    <td>SA3-PLN-ME-1838</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>588</td>
+    <td>SA3-PLN-ME-1841</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>589</td>
+    <td>SA3-PLN-ME-1842</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>590</td>
+    <td>SA3-PLN-ME-1848</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>591</td>
+    <td>SA3-PLN-ME-1852</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>592</td>
+    <td>SA3-PLN-ME-1855</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>593</td>
+    <td>SA3-PLN-ME-1858</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>594</td>
+    <td>SA3-PLN-ME-1859</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>595</td>
+    <td>SA3-PLN-ME-1865</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>596</td>
+    <td>SA3-PLN-ME-1868</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>597</td>
+    <td>SA3-PLN-ME-1869</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>598</td>
+    <td>SA3-PLN-ME-1874</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>599</td>
+    <td>SA3-PLN-ME-1878</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>600</td>
+    <td>SA3-PLN-ME-1880</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>601</td>
+    <td>SA3-PLN-ME-1883</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>602</td>
+    <td>SA3-PLN-ME-1884</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>603</td>
+    <td>SA3-PLN-ME-1889</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>604</td>
+    <td>SA3-PLN-ME-1893</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>605</td>
+    <td>SA3-PLN-ME-1895</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>606</td>
+    <td>SA3-PLN-ME-1898</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>607</td>
+    <td>SA3-PLN-ME-1899</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>608</td>
+    <td>SA3-PLN-ME-1905</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>609</td>
+    <td>SA3-PLN-ME-1909</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>610</td>
+    <td>SA3-PLN-ME-1914</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>611</td>
+    <td>SA3-PLN-ME-1917</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>612</td>
+    <td>SA3-PLN-ME-1918</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+
+
+<tr class="colored-red">
+    <td>613</td>
+    <td>SA3-PLN-ME-1923</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>614</td>
+    <td>SA3-PLN-ME-1924</td>
+    <td>Final painting for pipe to be done.</td>
+</tr>
+<tr class="colored-red">
+    <td>615</td>
+    <td>SA3-PLN-ME-1929</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>616</td>
+    <td>SA3-PLN-ME-1930</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>617</td>
+    <td>SA3-PLN-ME-1934</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>618</td>
+    <td>SA3-PLN-ME-1937</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>619</td>
+    <td>SA3-PLN-ME-1938</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>620</td>
+    <td>SA3-PLN-ME-1944</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>621</td>
+    <td>SA3-PLN-ME-1948</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>622</td>
+    <td>SA3-PLN-ME-1950</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>623</td>
+    <td>SA3-PLN-ME-1953</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>624</td>
+    <td>SA3-PLN-ME-1954</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>625</td>
+    <td>SA3-PLN-ME-1959</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>626</td>
+    <td>SA3-PLN-ME-1962</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>627</td>
+    <td>SA3-PLN-ME-1963</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>628</td>
+    <td>SA3-PLN-ME-1968</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>629</td>
+    <td>SA3-PLN-ME-1972</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>630</td>
+    <td>SA3-PLN-ME-1974</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>631</td>
+    <td>SA3-PLN-ME-1977</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>632</td>
+    <td>SA3-PLN-ME-1978</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>633</td>
+    <td>SA3-PLN-ME-1984</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>634</td>
+    <td>SA3-PLN-ME-1988</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>635</td>
+    <td>SA3-PLN-ME-1990</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>636</td>
+    <td>SA3-PLN-ME-1994</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>637</td>
+    <td>SA3-PLN-ME-1996</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>638</td>
+    <td>SA3-PLN-ME-1999</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+
+
+<tr class="colored-red">
+    <td>639</td>
+    <td>SA3-PLN-ME-2000</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>640</td>
+    <td>SA3-PLN-ME-2006</td>
+    <td>Touchup paint to be applied for the piping, supports, and valves</td>
+</tr>
+<tr class="colored-red">
+    <td>641</td>
+    <td>SA3-PLN-ME-2010</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>642</td>
+    <td>SA3-PLN-ME-2014</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>643</td>
+    <td>SA3-PLN-ME-2017</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>644</td>
+    <td>SA3-PLN-ME-2018</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+<tr class="colored-red">
+    <td>645</td>
+    <td>SA3-PLN-ME-2024</td>
+    <td>Cement splashes on valve and base plates to be cleaned, then scratches and damages to be properly repaired, and paint should be same as original paint</td>
+</tr>
+<tr class="colored-red">
+    <td>646</td>
+    <td>SA3-PLN-ME-2027</td>
+    <td>Vent spool pipe paint to be done from flange to ball valve connection</td>
+</tr>
+<tr class="colored-red">
+    <td>647</td>
+    <td>SA3-PLN-ME-2028</td>
+    <td>All rusted stud, bolt and nuts, to be cleaned and painted with GI repair paint</td>
+</tr>
+
+
+             
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function copyTable() {
+            const range = document.createRange();
+            range.selectNode(document.querySelector("table"));
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            alert("Table copied to clipboard");
+        }
+
+        function filterTable() {
+            // Implement filter logic here
+            alert("Filter function not implemented yet");
+        }
+
+        function printTable() {
+            const table = document.querySelector("table").outerHTML;
+            const newWin = window.open("");
+            newWin.document.write(`
+                <html>
+                    <head>
+                        <title>Print Table</title>
+                    </head>
+                    <body>
+                        ${table}
+                    </body>
+                </html>
+            `);
+            newWin.print();
+            newWin.close();
+        }
+    </script>
+</body>
+</html>
+
+               
+
+
+
+
+
+
+
+
+
+
+
+                            <!-- ========== -->
+                            <!-- ========== -->
+                            <!-- ========== -->
+                            <!-- ========== -->
+                            <!-- ========== -->
+                            <!-- ========== -->
+                            <!-- ========== -->
+
+
+                        </tbody>
+                    </table>
+                </div>
